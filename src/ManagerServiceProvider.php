@@ -64,5 +64,6 @@ class ManagerServiceProvider extends ServiceProvider
 
     $this->publishes([__DIR__.'/css' => public_path('css')], 'styles');
     $this->publishes([__DIR__.'/img' => public_path('img')], 'images');
+    $this->publishes([__DIR__.'/Middleware' => app_path('/Http/Middleware')], 'middleware');
   }
 }

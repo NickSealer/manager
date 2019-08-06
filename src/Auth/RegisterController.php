@@ -2,7 +2,7 @@
 
 namespace Ninja\Manager\Auth;
 
-use Ninja\Manager\User;
+use Ninja\Manager\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
