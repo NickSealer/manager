@@ -14,7 +14,6 @@ use Ninja\Manager\Admin\SliderController;
 use Ninja\Manager\Admin\LinkController;
 use Ninja\Manager\Admin\AdminController;
 use Ninja\Manager\Admin\AttachmentController;
-// use Ninja\Manager\HomeController;
 use Ninja\Manager\Middleware\IsAdmin;
 use Ninja\Manager\Auth\LoginController;
 use Ninja\Manager\Auth\RegisterController;
@@ -64,6 +63,5 @@ class ManagerServiceProvider extends ServiceProvider
 
     $this->publishes([__DIR__.'/css' => public_path('css')], 'styles');
     $this->publishes([__DIR__.'/img' => public_path('img')], 'images');
-    $this->publishes([__DIR__.'/Middleware' => app_path('/Http/Middleware')], 'middleware');
   }
 }

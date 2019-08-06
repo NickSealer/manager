@@ -16,6 +16,6 @@ class IsAdmin
       if (Auth::user() && Auth::user()->active == true && (Auth::user()->role == "Admin" || Auth::user()->role == "Mod")) {
         return $next($request);
       }
-      return redirect('/admin.products.index');
+      return redirect('/');
    }
 }

@@ -20,9 +20,8 @@ Route::group(['middleware' => ['web']], function() {
   Route::get('/password/reset/{token}', 'Ninja\Manager\Auth\ResetPasswordController@showResetForm')->name('password.reset');
   Route::get('/resgister', 'Ninja\Manager\Auth\RegisterController@showRegistrationForm')->name('register');
   Route::post('/resgister', 'Ninja\Manager\Auth\RegisterController@register');
-  //
 
-  Route::prefix('admin')->namespace('Ninja\Manager\Admin')->as('admin.')->middleware(['auth'])->group(function () {
+  Route::prefix('admin')->namespace('Ninja\Manager\Admin')->as('admin.')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/', 'ProductController@index');
     Route::resource('locations', 'LocationController');
     Route::resource('users', 'UserController');
@@ -37,5 +36,4 @@ Route::group(['middleware' => ['web']], function() {
     Route::resource('attachments', 'AttachmentController');
   });
 
-  // Route::get('/', 'Ninja\Manager\HomeController@index')->name('home');
 });
