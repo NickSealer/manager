@@ -1,0 +1,42 @@
+{
+  "name": "ninja/manager",
+  "description": "Administrator with Login",
+  "keywords": ["manager", "admin", "login", "laravel", "articles", "categories", "users", "links", "pages", "locations", "products", "sliders"],
+  "homepage": "",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Gustavo Barragan",
+      "email": "kalvinmanson@gmail.com"
+    },
+    {
+      "name": "Daniel Jimenez",
+      "email": "danielj9610@gmail.com"
+    },
+    {
+      "name": "Miguel castillo",
+      "email": ""
+    },
+    {
+      "name": "Nick Fontecha",
+      "email": "nickfontechav@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2.0",
+    "laracasts/flash": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ninja\\Manager\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Ninja\\Manager\\ManagerServiceProvider"
+      ]
+    }
+  }
+}
